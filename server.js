@@ -1,14 +1,16 @@
-// Import required modules
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 
-// Initialize the Express application
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-// Middleware to enable CORS and parse JSON bodies
-app.use(cors());
+// Configure CORS to only allow requests from your Netlify frontend
+const corsOptions = {
+    origin: 'https://eduverse09.netlify.app'
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // In-memory "database" to store user data
@@ -17,8 +19,6 @@ const users = [];
 // In-memory store for OTPs
 const otps = {};
 
-// Nodemailer transporter setup for sending emails
-// You need to replace these with your actual Gmail account and App Password
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -31,12 +31,14 @@ const transporter = nodemailer.createTransport({
 app.post('/api/signup', (req, res) => {
     const { name, email, password } = req.body;
 
-    // Check if user already exists
     if (users.find(user => user.email === email)) {
         return res.status(409).json({ message: 'User with that email already exists.' });
     }
 
-    // Create new user object
+    if (password.length < 6 || !/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        return res.status(400).json({ message: 'Password must be at least 6 characters and contain a special symbol.' });
+    }
+
     const newUser = { name, email, password };
     users.push(newUser);
 
@@ -48,7 +50,6 @@ app.post('/api/signup', (req, res) => {
 app.post('/api/signin', (req, res) => {
     const { email, password } = req.body;
 
-    // Find user by email and check password
     const user = users.find(u => u.email === email && u.password === password);
 
     if (user) {
@@ -62,24 +63,19 @@ app.post('/api/signin', (req, res) => {
 // API endpoint to generate and send a security code
 app.post('/api/get-security-code', (req, res) => {
     const { email } = req.body;
-    
-    // Generate a 6-digit OTP
-    const otp = Math.floor(100000 + Math.random() * 900000).toString(); 
-    
-    // Store the OTP with a timestamp for a 5-minute validity period
+
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
     otps[email] = { code: otp, expires: Date.now() + 300000 };
-    
+
     console.log(`Sending OTP ${otp} to ${email}`);
 
-    // Email content
     const mailOptions = {
-        from: 'your_email@gmail.com', // Replace with your Gmail address
-        to: email, 
+        from: 'your_email@gmail.com',
+        to: email,
         subject: 'Your EduVerse Security Code',
         text: `Your one-time security code is: ${otp}. Do not share this code with anyone.`
     };
 
-    // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error('Error sending email:', error);
@@ -94,16 +90,15 @@ app.post('/api/get-security-code', (req, res) => {
 app.post('/api/verify-security-code', (req, res) => {
     const { email, code } = req.body;
     const storedOtp = otps[email];
-    
+
     if (storedOtp && storedOtp.code === code && storedOtp.expires > Date.now()) {
-        delete otps[email]; // Code used, so delete it
+        delete otps[email];
         res.status(200).json({ message: 'Code verified successfully!' });
     } else {
         res.status(400).json({ message: 'Invalid or expired code.' });
     }
 });
 
-// Start the server
 app.listen(port, () => {
     console.log(`Server listening at http://localhost:${port}`);
 });
