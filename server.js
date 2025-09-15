@@ -504,7 +504,7 @@ app.post('/api/verify-security-code', (req, res) => {
 // API endpoint to get assignment questions
 app.get('/api/assignments/:courseId/:moduleId', (req, res) => {
     const { courseId, moduleId } = req.params;
-    const assignmentPath = path.join(__dirname, '..', 'assignments', `${courseId}-${moduleId}.json`);
+    const assignmentPath = path.join(__dirname, 'assignments', `${courseId}-${moduleId}.json`);
     
     try {
         if (fs.existsSync(assignmentPath)) {
@@ -786,4 +786,5 @@ app.listen(port, () => {
     console.log(`📁 Database directory: ${DB_DIR}`);
     console.log(`📄 Database files initialized successfully`);
 });
+
 
