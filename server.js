@@ -1,13 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 10000;
 
 // Configure CORS to only allow requests from your Netlify frontend
 const corsOptions = {
-    origin: 'https://eduverse09.netlify.app'
+    origin: ['https://eduverse09.netlify.app', 'http://127.0.0.1:5500']
 };
 
 app.use(cors(corsOptions));
@@ -19,6 +21,9 @@ const users = [];
 // In-memory store for OTPs
 const otps = {};
 
+// In-memory store for assignment scores
+const assignmentScores = {};
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -26,6 +31,12 @@ const transporter = nodemailer.createTransport({
         pass: 'nnwk jyzk yhrk asoq'     // Replace with your 16-character App Password
     }
 });
+
+//GET enpoint
+
+app.get('/', (req, res) => {
+    return res.status(200).json({ message: 'Server is running' });
+})
 
 // API endpoint for user sign-up
 app.post('/api/signup', (req, res) => {
@@ -96,6 +107,89 @@ app.post('/api/verify-security-code', (req, res) => {
         res.status(200).json({ message: 'Code verified successfully!' });
     } else {
         res.status(400).json({ message: 'Invalid or expired code.' });
+    }
+});
+
+// API endpoint to get assignment questions
+app.get('/api/assignments/:courseId/:moduleId', (req, res) => {
+    const { courseId, moduleId } = req.params;
+    const assignmentPath = path.join(__dirname, '..', 'assignments', `${courseId}-${moduleId}.json`);
+    
+    try {
+        if (fs.existsSync(assignmentPath)) {
+            const assignmentData = JSON.parse(fs.readFileSync(assignmentPath, 'utf8'));
+            res.json(assignmentData);
+        } else {
+            res.status(404).json({ message: 'Assignment not found' });
+        }
+    } catch (error) {
+        console.error('Error reading assignment file:', error);
+        res.status(500).json({ message: 'Error loading assignment' });
+    }
+});
+
+// API endpoint to submit assignment scores
+app.post('/api/assignments/submit-score', (req, res) => {
+    const { email, courseId, moduleId, score, totalQuestions, answers } = req.body;
+    
+    if (!email || !courseId || !moduleId || score === undefined) {
+        return res.status(400).json({ message: 'Missing required fields' });
+    }
+    
+    const scoreKey = `${email}-${courseId}-${moduleId}`;
+    const scoreData = {
+        email,
+        courseId,
+        moduleId,
+        score,
+        totalQuestions,
+        answers,
+        timestamp: new Date().toISOString(),
+        percentage: Math.round((score / totalQuestions) * 100)
+    };
+    
+    assignmentScores[scoreKey] = scoreData;
+    
+    console.log('Assignment score submitted:', scoreData);
+    res.json({ 
+        message: 'Score submitted successfully',
+        scoreData: {
+            score,
+            totalQuestions,
+            percentage: scoreData.percentage
+        }
+    });
+});
+
+// API endpoint to get user's assignment scores
+app.get('/api/assignments/scores/:email', (req, res) => {
+    const { email } = req.params;
+    const userScores = Object.values(assignmentScores).filter(score => score.email === email);
+    
+    res.json({
+        email,
+        scores: userScores
+    });
+});
+
+// API endpoint to get all available assignments
+app.get('/api/assignments', (req, res) => {
+    const assignmentsDir = path.join(__dirname, '..', 'assignments');
+    
+    try {
+        if (fs.existsSync(assignmentsDir)) {
+            const files = fs.readdirSync(assignmentsDir).filter(file => file.endsWith('.json'));
+            const assignments = files.map(file => {
+                const [courseId, moduleId] = file.replace('.json', '').split('-');
+                return { courseId, moduleId, fileName: file };
+            });
+            res.json(assignments);
+        } else {
+            res.json([]);
+        }
+    } catch (error) {
+        console.error('Error reading assignments directory:', error);
+        res.status(500).json({ message: 'Error loading assignments' });
     }
 });
 
