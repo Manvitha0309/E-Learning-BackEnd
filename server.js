@@ -7,6 +7,90 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 10000;
 
+// Database configuration
+const DB_DIR = path.join(__dirname, 'database');
+const USERS_FILE = path.join(DB_DIR, 'users.json');
+const ASSIGNMENT_SCORES_FILE = path.join(DB_DIR, 'assignment_scores.json');
+const OTPS_FILE = path.join(DB_DIR, 'otps.json');
+
+console.log('📁 Database directory path:', DB_DIR);
+console.log('📄 Database files paths:', {
+    users: USERS_FILE,
+    scores: ASSIGNMENT_SCORES_FILE,
+    otps: OTPS_FILE
+});
+
+// Ensure database directory exists
+if (!fs.existsSync(DB_DIR)) {
+    fs.mkdirSync(DB_DIR, { recursive: true });
+    console.log('📁 Database directory created:', DB_DIR);
+}
+
+// Database utility functions
+function readJsonFile(filePath, defaultValue = []) {
+    try {
+        if (fs.existsSync(filePath)) {
+            const data = fs.readFileSync(filePath, 'utf8');
+            return JSON.parse(data);
+        }
+        return defaultValue;
+    } catch (error) {
+        console.error(`Error reading ${filePath}:`, error);
+        return defaultValue;
+    }
+}
+
+function writeJsonFile(filePath, data) {
+    try {
+        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+        return true;
+    } catch (error) {
+        console.error(`Error writing ${filePath}:`, error);
+        return false;
+    }
+}
+
+// Initialize database files if they don't exist
+function initializeDatabase() {
+    const files = [
+        { path: USERS_FILE, default: [] },
+        { path: ASSIGNMENT_SCORES_FILE, default: {} },
+        { path: OTPS_FILE, default: {} }
+    ];
+    
+    files.forEach(({ path: filePath, default: defaultValue }) => {
+        if (!fs.existsSync(filePath)) {
+            writeJsonFile(filePath, defaultValue);
+            console.log(`📄 Created database file: ${path.basename(filePath)}`);
+        }
+    });
+}
+
+// Initialize database on startup
+initializeDatabase();
+
+// Cleanup expired OTPs function
+function cleanupExpiredOtps() {
+    otps = readJsonFile(OTPS_FILE, {});
+    const now = Date.now();
+    let cleaned = false;
+    
+    Object.keys(otps).forEach(email => {
+        if (otps[email].expires < now) {
+            delete otps[email];
+            cleaned = true;
+        }
+    });
+    
+    if (cleaned) {
+        saveOtps();
+        console.log('🧹 Cleaned up expired OTPs');
+    }
+}
+
+// Cleanup expired OTPs every 5 minutes
+setInterval(cleanupExpiredOtps, 5 * 60 * 1000);
+
 // Configure CORS to only allow requests from your Netlify frontend
 const corsOptions = {
     origin: ['https://eduverse09.netlify.app', 'http://127.0.0.1:5500']
@@ -15,14 +99,23 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// In-memory "database" to store user data
-const users = [];
+// File-based database - data is loaded from files
+let users = readJsonFile(USERS_FILE, []);
+let assignmentScores = readJsonFile(ASSIGNMENT_SCORES_FILE, {});
+let otps = readJsonFile(OTPS_FILE, {});
 
-// In-memory store for OTPs
-const otps = {};
+// Function to save data to files
+function saveUsers() {
+    return writeJsonFile(USERS_FILE, users);
+}
 
-// In-memory store for assignment scores
-const assignmentScores = {};
+function saveAssignmentScores() {
+    return writeJsonFile(ASSIGNMENT_SCORES_FILE, assignmentScores);
+}
+
+function saveOtps() {
+    return writeJsonFile(OTPS_FILE, otps);
+}
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -160,12 +253,21 @@ async function sendAssignmentResultsEmail(scoreData) {
     };
     
     return new Promise((resolve, reject) => {
+        console.log(`📤 Attempting to send email to: ${email}`);
+        console.log(`📧 Email subject: ${mailOptions.subject}`);
+        console.log(`📧 From: ${mailOptions.from}`);
+        
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
-                console.error('Error sending assignment results email:', error);
+                console.error('❌ Error sending assignment results email:', error);
+                console.error('❌ Error details:', error.message);
                 reject(error);
             } else {
-                console.log('Assignment results email sent:', info.response);
+                console.log('✅ Assignment results email sent successfully!');
+                console.log('📧 SMTP Response:', info.response);
+                console.log('📧 Message ID:', info.messageId);
+                console.log('📧 Accepted recipients:', info.accepted);
+                console.log('📧 Rejected recipients:', info.rejected);
                 resolve(info);
             }
         });
@@ -176,6 +278,12 @@ async function sendAssignmentResultsEmail(scoreData) {
 
 app.get('/', (req, res) => {
     return res.status(200).json({ message: 'Server is running' });
+})
+
+// Test endpoint for debugging
+app.get('/api/test', (req, res) => {
+    console.log('🧪 Test endpoint hit');
+    res.status(200).json({ message: 'Backend is working!', timestamp: new Date().toISOString() });
 })
 
 // Test endpoint for email functionality
@@ -216,7 +324,10 @@ app.post('/api/test-email', async (req, res) => {
 
 // API endpoint for user sign-up
 app.post('/api/signup', (req, res) => {
-    const { name, email, password } = req.body;
+    const { name, email, password, securityQuestion, securityAnswer } = req.body;
+
+    // Reload users from file to ensure we have the latest data
+    users = readJsonFile(USERS_FILE, []);
 
     if (users.find(user => user.email === email)) {
         return res.status(409).json({ message: 'User with that email already exists.' });
@@ -226,49 +337,106 @@ app.post('/api/signup', (req, res) => {
         return res.status(400).json({ message: 'Password must be at least 6 characters and contain a special symbol.' });
     }
 
-    const newUser = { name, email, password };
+    const newUser = { 
+        id: Date.now().toString(), // Add unique ID
+        name, 
+        email, 
+        password,
+        securityQuestion: securityQuestion || null,
+        securityAnswer: securityAnswer || null,
+        createdAt: new Date().toISOString(),
+        lastLogin: null
+    };
+    
     users.push(newUser);
 
-    console.log('New user signed up:', newUser);
-    res.status(201).json({ message: 'User signed up successfully!' });
+    // Save to file
+    if (saveUsers()) {
+        console.log('✅ New user signed up and saved to database:', { 
+            id: newUser.id, 
+            name, 
+            email, 
+            hasSecurityQuestion: !!securityQuestion,
+            securityQuestion: securityQuestion || 'None'
+        });
+        res.status(201).json({ message: 'User signed up successfully!' });
+    } else {
+        console.error('❌ Failed to save user to database');
+        res.status(500).json({ message: 'Failed to create user account. Please try again.' });
+    }
 });
 
 // API endpoint for user sign-in
 app.post('/api/signin', (req, res) => {
     const { email, password } = req.body;
 
+    // Reload users from file to ensure we have the latest data
+    users = readJsonFile(USERS_FILE, []);
+
     const user = users.find(u => u.email === email && u.password === password);
 
     if (user) {
-        console.log('User signed in:', user);
-        res.status(200).json({ message: 'Sign in successful!' });
+        // Update last login time
+        user.lastLogin = new Date().toISOString();
+        saveUsers();
+        
+        console.log('✅ User signed in:', { id: user.id, name: user.name, email: user.email });
+        res.status(200).json({ 
+            message: 'Sign in successful!',
+            user: {
+                id: user.id,
+                name: user.name,
+                email: user.email
+            }
+        });
     } else {
+        console.log('❌ Failed sign-in attempt for email:', email);
         res.status(401).json({ message: 'Invalid email or password.' });
     }
 });
 
 // API endpoint to generate and send a security code
 app.post('/api/get-security-code', (req, res) => {
+    console.log('📧 GET SECURITY CODE endpoint hit');
+    console.log('Request body:', req.body);
+    console.log('Request headers:', req.headers);
+    
     const { email } = req.body;
 
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    otps[email] = { code: otp, expires: Date.now() + 300000 };
+    // Reload OTPs from file
+    otps = readJsonFile(OTPS_FILE, {});
 
-    console.log(`Sending OTP ${otp} to ${email}`);
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    otps[email] = { 
+        code: otp, 
+        expires: Date.now() + 300000, // 5 minutes
+        createdAt: new Date().toISOString()
+    };
+
+    // Save OTPs to file
+    if (saveOtps()) {
+        console.log(`✅ OTP saved to database for: ${email}`);
+    } else {
+        console.error(`❌ Failed to save OTP to database for: ${email}`);
+    }
+
+    console.log(`📧 Sending OTP ${otp} to ${email}`);
 
     const mailOptions = {
-        from: 'your_email@gmail.com',
+        from: 'mk7080252@gmail.com',
         to: email,
         subject: 'Your EduVerse Security Code',
-        text: `Your one-time security code is: ${otp}. Do not share this code with anyone.`
+        text: `Your one-time security code is: ${otp}. Do not share this code with anyone. This code expires in 5 minutes.`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.error('Error sending email:', error);
+            console.error('❌ Error sending OTP email:', error);
+            console.error('❌ Error details:', error.message);
             return res.status(500).json({ message: 'Failed to send security code.' });
         }
-        console.log('Email sent:', info.response);
+        console.log('✅ OTP email sent successfully:', info.response);
+        console.log('✅ Sending 200 response to frontend');
         res.status(200).json({ message: 'Security code sent to your email.' });
     });
 });
@@ -276,12 +444,22 @@ app.post('/api/get-security-code', (req, res) => {
 // API endpoint to verify the security code
 app.post('/api/verify-security-code', (req, res) => {
     const { email, code } = req.body;
+    
+    // Reload OTPs from file
+    otps = readJsonFile(OTPS_FILE, {});
+    console.log(`🔍 Looking for OTP for email: ${email}`);
+    console.log(`📋 Current OTPs in database:`, Object.keys(otps));
     const storedOtp = otps[email];
 
     if (storedOtp && storedOtp.code === code && storedOtp.expires > Date.now()) {
+        // Remove the used OTP
         delete otps[email];
+        saveOtps();
+        
+        console.log(`✅ OTP verified successfully for: ${email}`);
         res.status(200).json({ message: 'Code verified successfully!' });
     } else {
+        console.log(`❌ Invalid or expired OTP attempt for: ${email}`);
         res.status(400).json({ message: 'Invalid or expired code.' });
     }
 });
@@ -325,24 +503,57 @@ app.post('/api/assignments/submit-score', async (req, res) => {
         percentage: Math.round((score / totalQuestions) * 100)
     };
     
+    // Reload assignment scores from file
+    assignmentScores = readJsonFile(ASSIGNMENT_SCORES_FILE, {});
     assignmentScores[scoreKey] = scoreData;
     
-    console.log('Assignment score submitted:', scoreData);
+    // Save assignment scores to file
+    saveAssignmentScores();
+    
+    console.log('✅ Assignment score submitted and saved to database:', scoreData);
     
     // Send email with assignment results
     try {
+        console.log(`📧 Sending assignment results email to: ${email}`);
+        console.log(`📊 Assignment details: ${courseId}-${moduleId}, Score: ${score}/${totalQuestions} (${scoreData.percentage}%)`);
+        
         await sendAssignmentResultsEmail(scoreData);
+        
+        console.log(`✅ Assignment results email sent successfully to: ${email}`);
+        
+        // Format course and module names for logging
+        const courseNames = {
+            'webdev': 'Web Development',
+            'datascience': 'Data Science',
+            'cns': 'Computer Networks & Security',
+            'uiux': 'UI/UX Design',
+            'mobiledev': 'Mobile Development',
+            'digitalmarketing': 'Digital Marketing'
+        };
+        
+        const moduleNames = {
+            'module1': 'Module 1',
+            'module2': 'Module 2',
+            'module3': 'Module 3',
+            'module4': 'Module 4'
+        };
+        
+        console.log(`📧 Email subject: Assignment Results - ${courseNames[courseId] || courseId} ${moduleNames[moduleId] || moduleId} (${scoreData.percentage}%)`);
+        
         res.json({ 
-            message: 'Score submitted successfully and results sent to your email',
+            message: `Score submitted successfully and results sent to ${email}`,
             scoreData: {
                 score,
                 totalQuestions,
                 percentage: scoreData.percentage
             },
-            emailSent: true
+            emailSent: true,
+            emailAddress: email
         });
     } catch (emailError) {
-        console.error('Error sending email:', emailError);
+        console.error('❌ Error sending email:', emailError);
+        console.log(`📧 Failed to send email to: ${email}`);
+        
         res.json({ 
             message: 'Score submitted successfully, but failed to send email',
             scoreData: {
@@ -351,20 +562,125 @@ app.post('/api/assignments/submit-score', async (req, res) => {
                 percentage: scoreData.percentage
             },
             emailSent: false,
-            emailError: 'Failed to send results email'
+            emailError: 'Failed to send results email',
+            emailAddress: email
         });
+    }
+});
+
+// API endpoint to get user's security question
+app.get('/api/user/security-question/:email', (req, res) => {
+    const { email } = req.params;
+    
+    // Reload users from file
+    users = readJsonFile(USERS_FILE, []);
+    const user = users.find(u => u.email === email);
+    
+    if (user && user.securityQuestion) {
+        console.log(`🔍 Retrieved security question for: ${email}`);
+        res.json({
+            email: user.email,
+            securityQuestion: user.securityQuestion,
+            questionText: getSecurityQuestionText(user.securityQuestion)
+        });
+    } else {
+        console.log(`❌ No security question found for: ${email}`);
+        res.status(404).json({ message: 'Security question not found for this user.' });
+    }
+});
+
+// Helper function to get security question text
+function getSecurityQuestionText(questionKey) {
+    const questions = {
+        'pet': 'What was the name of your first pet?',
+        'city': 'What city were you born in?',
+        'mother': 'What is your mother\'s maiden name?'
+    };
+    return questions[questionKey] || 'Unknown question';
+}
+
+// API endpoint to verify security answer
+app.post('/api/user/verify-security-answer', (req, res) => {
+    const { email, securityAnswer } = req.body;
+    
+    // Reload users from file
+    users = readJsonFile(USERS_FILE, []);
+    const user = users.find(u => u.email === email);
+    
+    if (user && user.securityAnswer && user.securityAnswer.toLowerCase() === securityAnswer.toLowerCase()) {
+        console.log(`✅ Security answer verified for: ${email}`);
+        res.json({ message: 'Security answer verified successfully!' });
+    } else {
+        console.log(`❌ Invalid security answer for: ${email}`);
+        res.status(400).json({ message: 'Invalid security answer.' });
+    }
+});
+
+// API endpoint to update user's security question (for existing users)
+app.post('/api/user/update-security-question', (req, res) => {
+    const { email, securityQuestion, securityAnswer } = req.body;
+    
+    // Reload users from file
+    users = readJsonFile(USERS_FILE, []);
+    const userIndex = users.findIndex(u => u.email === email);
+    
+    if (userIndex !== -1) {
+        users[userIndex].securityQuestion = securityQuestion;
+        users[userIndex].securityAnswer = securityAnswer;
+        users[userIndex].updatedAt = new Date().toISOString();
+        
+        if (saveUsers()) {
+            console.log(`✅ Security question updated for: ${email}`);
+            res.json({ message: 'Security question updated successfully!' });
+        } else {
+            console.error(`❌ Failed to save security question for: ${email}`);
+            res.status(500).json({ message: 'Failed to update security question.' });
+        }
+    } else {
+        console.log(`❌ User not found: ${email}`);
+        res.status(404).json({ message: 'User not found.' });
     }
 });
 
 // API endpoint to get user's assignment scores
 app.get('/api/assignments/scores/:email', (req, res) => {
     const { email } = req.params;
+    
+    // Reload assignment scores from file
+    assignmentScores = readJsonFile(ASSIGNMENT_SCORES_FILE, {});
     const userScores = Object.values(assignmentScores).filter(score => score.email === email);
+    
+    console.log(`📊 Retrieved ${userScores.length} scores for user: ${email}`);
     
     res.json({
         email,
         scores: userScores
     });
+});
+
+// API endpoint to check if user has already taken a specific assignment
+app.get('/api/assignments/check-completion/:email/:courseId/:moduleId', (req, res) => {
+    const { email, courseId, moduleId } = req.params;
+    const key = `${email}-${courseId}-${moduleId}`;
+    
+    console.log('🔍 Checking assignment completion for:', { email, courseId, moduleId, key });
+    
+    // Reload assignment scores from file
+    assignmentScores = readJsonFile(ASSIGNMENT_SCORES_FILE, {});
+    
+    if (assignmentScores[key]) {
+        console.log('✅ Assignment already completed:', assignmentScores[key]);
+        res.json({ 
+            completed: true, 
+            score: assignmentScores[key].score,
+            totalQuestions: assignmentScores[key].totalQuestions,
+            percentage: assignmentScores[key].percentage,
+            timestamp: assignmentScores[key].timestamp
+        });
+    } else {
+        console.log('❌ Assignment not completed yet');
+        res.json({ completed: false });
+    }
 });
 
 // API endpoint to get all available assignments
@@ -388,7 +704,49 @@ app.get('/api/assignments', (req, res) => {
     }
 });
 
+// Database management endpoints (for development/admin purposes)
+app.get('/api/admin/database/stats', (req, res) => {
+    const users = readJsonFile(USERS_FILE, []);
+    const assignmentScores = readJsonFile(ASSIGNMENT_SCORES_FILE, {});
+    const otps = readJsonFile(OTPS_FILE, {});
+    
+    const stats = {
+        users: {
+            total: users.length,
+            recent: users.filter(user => {
+                const createdAt = new Date(user.createdAt);
+                const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+                return createdAt > weekAgo;
+            }).length,
+            withSecurityQuestions: users.filter(user => user.securityQuestion).length
+        },
+        assignmentScores: {
+            total: Object.keys(assignmentScores).length,
+            uniqueUsers: new Set(Object.values(assignmentScores).map(score => score.email)).size
+        },
+        otps: {
+            active: Object.keys(otps).length,
+            expired: Object.values(otps).filter(otp => otp.expires < Date.now()).length
+        }
+    };
+    
+    res.json(stats);
+});
+
+app.get('/api/admin/database/backup', (req, res) => {
+    const backup = {
+        timestamp: new Date().toISOString(),
+        users: readJsonFile(USERS_FILE, []),
+        assignmentScores: readJsonFile(ASSIGNMENT_SCORES_FILE, {}),
+        otps: readJsonFile(OTPS_FILE, {})
+    };
+    
+    res.json(backup);
+});
+
 app.listen(port, () => {
-    console.log(`Server listening at http://localhost:${port}`);
+    console.log(`🚀 Server listening at http://localhost:${port}`);
+    console.log(`📁 Database directory: ${DB_DIR}`);
+    console.log(`📄 Database files initialized successfully`);
 });
 
