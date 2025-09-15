@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Real-World Applications",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a VPN (Virtual Private Network)?",
+      "options": [
+        "A type of computer virus",
+        "A secure connection that allows users to access a private network over the internet",
+        "A type of firewall",
+        "A database system"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A VPN (Virtual Private Network) creates a secure connection that allows users to access a private network over the internet, encrypting data and providing privacy and security."
+    },
+    {
+      "id": 2,
+      "question": "What is cloud security?",
+      "options": [
+        "Security for physical clouds",
+        "Protecting data, applications, and infrastructure in cloud environments",
+        "Security for weather systems",
+        "A type of encryption"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cloud security involves protecting data, applications, and infrastructure in cloud environments through various security measures and best practices."
+    },
+    {
+      "id": 3,
+      "question": "What is digital forensics?",
+      "options": [
+        "Creating digital evidence",
+        "The process of collecting, analyzing, and preserving digital evidence for legal purposes",
+        "A type of cyber attack",
+        "A security policy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Digital forensics is the process of collecting, analyzing, and preserving digital evidence for legal purposes, often used in cybercrime investigations."
+    },
+    {
+      "id": 4,
+      "question": "What is incident response in cybersecurity?",
+      "options": [
+        "Preventing all security incidents",
+        "The process of handling and managing security incidents when they occur",
+        "Creating security policies",
+        "Training employees"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Incident response in cybersecurity is the process of handling and managing security incidents when they occur, including detection, analysis, containment, and recovery."
+    },
+    {
+      "id": 5,
+      "question": "What are future trends in network security?",
+      "options": [
+        "Reducing security measures",
+        "AI-powered security, zero-trust architecture, and quantum-resistant cryptography",
+        "Eliminating all security controls",
+        "Using only basic passwords"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Future trends in network security include AI-powered security, zero-trust architecture, quantum-resistant cryptography, and other advanced security technologies."
+    },
+    {
+      "id": 6,
+      "question": "What is zero-trust architecture?",
+      "options": [
+        "Trusting all users by default",
+        "A security model that assumes no user or device should be trusted by default",
+        "A type of firewall",
+        "A network protocol"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Zero-trust architecture is a security model that assumes no user or device should be trusted by default, requiring verification for every access request."
+    },
+    {
+      "id": 7,
+      "question": "What is the importance of security awareness training?",
+      "options": [
+        "To make employees work faster",
+        "To educate employees about security threats and best practices",
+        "To reduce IT costs",
+        "To improve network performance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Security awareness training educates employees about security threats and best practices, helping them recognize and avoid potential security risks."
+    },
+    {
+      "id": 8,
+      "question": "What is the role of AI in cybersecurity?",
+      "options": [
+        "To replace all security professionals",
+        "To enhance threat detection, automate responses, and improve security analytics",
+        "To reduce security costs",
+        "To eliminate all cyber threats"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AI in cybersecurity enhances threat detection, automates responses, and improves security analytics, helping organizations respond to threats more effectively."
+    },
+    {
+      "id": 9,
+      "question": "What is the importance of regular security updates?",
+      "options": [
+        "To make systems faster",
+        "To patch vulnerabilities and protect against new threats",
+        "To reduce system costs",
+        "To improve user experience"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regular security updates patch vulnerabilities and protect against new threats, ensuring systems remain secure against evolving cyber threats."
+    },
+    {
+      "id": 10,
+      "question": "What is the future of cybersecurity?",
+      "options": [
+        "Cybersecurity will become unnecessary",
+        "Increasing importance due to growing digital threats and the need for advanced protection",
+        "Cybersecurity will only be needed for large companies",
+        "Cybersecurity will become simpler"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The future of cybersecurity involves increasing importance due to growing digital threats, requiring advanced protection measures and continuous adaptation to new challenges."
+    }
+  ]
+}

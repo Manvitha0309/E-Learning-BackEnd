@@ -1,0 +1,127 @@
+{
+  "courseId": "datascience",
+  "moduleId": "module2",
+  "moduleTitle": "Data Manipulation",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Pandas in Python?",
+      "options": [
+        "A type of animal",
+        "A library for data manipulation and analysis",
+        "A programming language",
+        "A database system"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pandas is a powerful Python library for data manipulation and analysis, providing data structures like DataFrames and Series."
+    },
+    {
+      "id": 2,
+      "question": "What is a DataFrame in Pandas?",
+      "options": [
+        "A single column of data",
+        "A two-dimensional labeled data structure",
+        "A function",
+        "A variable type"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A DataFrame is a two-dimensional labeled data structure with columns of potentially different types, similar to a spreadsheet or SQL table."
+    },
+    {
+      "id": 3,
+      "question": "Which method is used to read a CSV file in Pandas?",
+      "options": [
+        "read_csv()",
+        "read_file()",
+        "import_csv()",
+        "load_csv()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The read_csv() function in Pandas is used to read CSV files and convert them into DataFrame objects."
+    },
+    {
+      "id": 4,
+      "question": "What is data cleaning?",
+      "options": [
+        "Making data look better",
+        "The process of identifying and correcting errors in data",
+        "Adding more data",
+        "Deleting all data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data cleaning involves identifying and correcting errors, handling missing values, and ensuring data quality for accurate analysis."
+    },
+    {
+      "id": 5,
+      "question": "How do you handle missing values in a Pandas DataFrame?",
+      "options": [
+        "Always delete rows with missing values",
+        "Use methods like dropna() or fillna()",
+        "Ignore missing values",
+        "Replace with random numbers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pandas provides methods like dropna() to remove missing values and fillna() to fill them with appropriate values."
+    },
+    {
+      "id": 6,
+      "question": "What is the purpose of the merge() function in Pandas?",
+      "options": [
+        "To combine two DataFrames based on common columns",
+        "To delete data",
+        "To sort data",
+        "To visualize data"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The merge() function combines two DataFrames based on common columns or indices, similar to SQL JOIN operations."
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between loc and iloc in Pandas?",
+      "options": [
+        "No difference",
+        "loc uses label-based indexing, iloc uses integer-based indexing",
+        "loc is for columns only, iloc is for rows only",
+        "loc is faster than iloc"
+      ],
+      "correctAnswer": 1,
+      "explanation": "loc uses label-based indexing (row/column names), while iloc uses integer-based indexing (row/column positions)."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of the groupby() function?",
+      "options": [
+        "To delete groups of data",
+        "To group data and perform operations on each group",
+        "To sort data",
+        "To visualize data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "groupby() splits data into groups based on some criteria and allows you to apply functions to each group independently."
+    },
+    {
+      "id": 9,
+      "question": "How do you select specific columns in a Pandas DataFrame?",
+      "options": [
+        "df[column_name]",
+        "df.column_name",
+        "Both A and B",
+        "df.select(column_name)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "You can select columns using bracket notation df['column_name'] or dot notation df.column_name (if column name has no spaces)."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of the describe() method in Pandas?",
+      "options": [
+        "To delete data",
+        "To provide descriptive statistics of the DataFrame",
+        "To sort data",
+        "To visualize data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The describe() method provides descriptive statistics including count, mean, std, min, max, and quartiles for numerical columns."
+    }
+  ]
+}

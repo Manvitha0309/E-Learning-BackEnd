@@ -1,0 +1,127 @@
+{
+  "courseId": "mobiledev",
+  "moduleId": "module1",
+  "moduleTitle": "Introduction to Mobile",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the difference between native and cross-platform development?",
+      "options": [
+        "No difference",
+        "Native apps are built for specific platforms, cross-platform apps work on multiple platforms",
+        "Native apps are always better",
+        "Cross-platform apps are always faster"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Native apps are built specifically for one platform (iOS or Android), while cross-platform apps are built once and can run on multiple platforms."
+    },
+    {
+      "id": 2,
+      "question": "Which programming language is used for iOS development?",
+      "options": [
+        "Java",
+        "Swift",
+        "Python",
+        "C++"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Swift is Apple's programming language for iOS development, though Objective-C is also used for legacy apps."
+    },
+    {
+      "id": 3,
+      "question": "Which programming language is used for Android development?",
+      "options": [
+        "Swift",
+        "Kotlin",
+        "Python",
+        "JavaScript"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Kotlin is the preferred language for Android development, though Java is also widely used."
+    },
+    {
+      "id": 4,
+      "question": "What is React Native?",
+      "options": [
+        "A database system",
+        "A framework for building cross-platform mobile apps using JavaScript",
+        "A programming language",
+        "A design tool"
+      ],
+      "correctAnswer": 1,
+      "explanation": "React Native is a framework that allows developers to build mobile apps using JavaScript and React, with native performance."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of an emulator in mobile development?",
+      "options": [
+        "To make apps run faster",
+        "To simulate mobile devices on a computer for testing",
+        "To design user interfaces",
+        "To store app data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An emulator simulates mobile devices on a computer, allowing developers to test apps without physical devices."
+    },
+    {
+      "id": 6,
+      "question": "What is the App Store?",
+      "options": [
+        "A physical store",
+        "Apple's digital distribution platform for iOS apps",
+        "A programming language",
+        "A design tool"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The App Store is Apple's digital distribution platform where users can download and purchase iOS applications."
+    },
+    {
+      "id": 7,
+      "question": "What is the Google Play Store?",
+      "options": [
+        "A physical store",
+        "Google's digital distribution platform for Android apps",
+        "A programming language",
+        "A design tool"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Google Play Store is Google's digital distribution platform where users can download and purchase Android applications."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of version control in mobile development?",
+      "options": [
+        "To control app versions",
+        "To track changes and collaborate on code",
+        "To make apps run faster",
+        "To design user interfaces"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Version control systems like Git help developers track changes, collaborate, and manage different versions of their mobile app code."
+    },
+    {
+      "id": 9,
+      "question": "What is the purpose of testing in mobile development?",
+      "options": [
+        "To make apps look better",
+        "To ensure apps work correctly on different devices and scenarios",
+        "To increase app size",
+        "To slow down development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Testing ensures that mobile apps work correctly across different devices, operating systems, and user scenarios."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between iOS and Android?",
+      "options": [
+        "No difference",
+        "iOS is Apple's mobile operating system, Android is Google's",
+        "iOS is for tablets only",
+        "Android is for iPhones only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "iOS is Apple's mobile operating system used on iPhones and iPads, while Android is Google's mobile operating system used on various devices."
+    }
+  ]
+}

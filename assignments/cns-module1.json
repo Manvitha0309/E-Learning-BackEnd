@@ -1,0 +1,127 @@
+{
+  "courseId": "cns",
+  "moduleId": "module1",
+  "moduleTitle": "Introduction to CNS",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Which of the following is a network topology?",
+      "options": [
+        "Star",
+        "Circle",
+        "Square",
+        "Line"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Star is a common network topology where all devices are connected to a central hub or switch."
+    },
+    {
+      "id": 2,
+      "question": "What is the primary purpose of a firewall?",
+      "options": [
+        "To speed up a network connection",
+        "To block unauthorized access to a network",
+        "To store network data",
+        "To manage network cables"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A firewall is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+    },
+    {
+      "id": 3,
+      "question": "What is the process of converting information into an unreadable format to prevent unauthorized access?",
+      "options": [
+        "Hacking",
+        "Cryptography",
+        "Decoding",
+        "Networking"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cryptography is the practice of securing information by converting it into an unreadable format using encryption algorithms."
+    },
+    {
+      "id": 4,
+      "question": "A DDoS attack is a type of cyber attack. What does DDoS stand for?",
+      "options": [
+        "Direct Denial of Service",
+        "Distributed Denial of Service",
+        "Dynamic Data on Server",
+        "Distributed Data Operating System"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DDoS stands for Distributed Denial of Service, where multiple compromised systems attack a single target to make it unavailable."
+    },
+    {
+      "id": 5,
+      "question": "Which layer of the OSI model is responsible for routing data?",
+      "options": [
+        "Physical Layer",
+        "Data Link Layer",
+        "Network Layer",
+        "Transport Layer"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The Network Layer (Layer 3) is responsible for routing data packets between different networks."
+    },
+    {
+      "id": 6,
+      "question": "What is a 'Trojan' in the context of cyber security?",
+      "options": [
+        "A type of network protocol",
+        "A type of malicious software that disguises itself as legitimate software",
+        "A type of firewall",
+        "A secure network device"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Trojan horse is malicious software that disguises itself as legitimate software to trick users into installing it."
+    },
+    {
+      "id": 7,
+      "question": "What is an IP address?",
+      "options": [
+        "A unique identifier for a device on a network",
+        "A programming language",
+        "A type of network cable",
+        "A web browser"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An IP address is a unique numerical identifier assigned to each device connected to a network."
+    },
+    {
+      "id": 8,
+      "question": "What is a 'phishing' attack?",
+      "options": [
+        "An attack that uses a fishing rod",
+        "An attack that tricks users into revealing personal information",
+        "An attack that floods a network with traffic",
+        "An attack that encrypts a user's files"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Phishing is a cyber attack that uses deceptive emails or websites to trick users into revealing sensitive information."
+    },
+    {
+      "id": 9,
+      "question": "What is the main purpose of an Intrusion Detection System (IDS)?",
+      "options": [
+        "To block all network traffic",
+        "To detect malicious activity and policy violations",
+        "To manage user accounts",
+        "To backup network data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An IDS monitors network traffic to detect suspicious activities and potential security breaches."
+    },
+    {
+      "id": 10,
+      "question": "Which of these is a common wireless network security protocol?",
+      "options": [
+        "HTTP",
+        "WEP",
+        "FTP",
+        "DNS"
+      ],
+      "correctAnswer": 1,
+      "explanation": "WEP (Wired Equivalent Privacy) is a security protocol for wireless networks, though it's now considered weak and outdated."
+    }
+  ]
+}

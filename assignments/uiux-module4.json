@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Final Project",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the first step in designing a mobile app?",
+      "options": [
+        "Creating the visual design",
+        "Defining the problem and understanding user needs",
+        "Choosing the color scheme",
+        "Setting up the development environment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The first step in designing a mobile app is defining the problem and understanding user needs through research, which informs all subsequent design decisions."
+    },
+    {
+      "id": 2,
+      "question": "What is a portfolio piece in UX/UI design?",
+      "options": [
+        "A physical portfolio case",
+        "A case study showcasing your design process and skills",
+        "A collection of design templates",
+        "A type of design software"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A portfolio piece is a case study that showcases your design process, problem-solving skills, and the impact of your design decisions, demonstrating your abilities to potential employers or clients."
+    },
+    {
+      "id": 3,
+      "question": "What should you include when presenting your design to stakeholders?",
+      "options": [
+        "Only the final visual designs",
+        "The design process, user research, and rationale behind decisions",
+        "Technical implementation details",
+        "Only the user interface mockups"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When presenting to stakeholders, you should include the design process, user research findings, and the rationale behind design decisions to help them understand the value and reasoning behind your work."
+    },
+    {
+      "id": 4,
+      "question": "What is the purpose of user testing in the final project phase?",
+      "options": [
+        "To make the design look more attractive",
+        "To validate design decisions and identify usability issues",
+        "To speed up the development process",
+        "To reduce design costs"
+      ],
+      "correctAnswer": 1,
+      "explanation": "User testing in the final project phase validates design decisions and identifies usability issues, ensuring the final product meets user needs and expectations."
+    },
+    {
+      "id": 5,
+      "question": "What is the difference between a wireframe and a mockup?",
+      "options": [
+        "Wireframes are digital, mockups are hand-drawn",
+        "Wireframes show structure and layout, mockups show visual design",
+        "Wireframes are for mobile, mockups are for desktop",
+        "There is no difference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Wireframes show the structure and layout of a design without visual styling, while mockups include visual design elements like colors, typography, and images."
+    },
+    {
+      "id": 6,
+      "question": "What is the importance of accessibility in UI design?",
+      "options": [
+        "It makes designs look more modern",
+        "It ensures the design is usable by people with disabilities",
+        "It reduces development time",
+        "It improves search engine rankings"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accessibility in UI design ensures that the design is usable by people with disabilities, making the product inclusive and accessible to a wider range of users."
+    },
+    {
+      "id": 7,
+      "question": "What should you consider when preparing for a design career?",
+      "options": [
+        "Only technical skills",
+        "A combination of technical skills, soft skills, and industry knowledge",
+        "Only visual design skills",
+        "Only user research skills"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Preparing for a design career requires a combination of technical skills (design tools, methodologies), soft skills (communication, collaboration), and industry knowledge to be successful."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of design handoff?",
+      "options": [
+        "To transfer design files to developers",
+        "To provide developers with all necessary information to implement the design",
+        "To archive completed projects",
+        "To share designs with clients"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Design handoff provides developers with all necessary information including specifications, assets, and guidelines to accurately implement the design in code."
+    },
+    {
+      "id": 9,
+      "question": "What is the benefit of creating a design system?",
+      "options": [
+        "It makes individual designs more unique",
+        "It ensures consistency and efficiency across all design work",
+        "It reduces the need for user research",
+        "It eliminates the need for prototyping"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A design system ensures consistency and efficiency across all design work by providing reusable components and guidelines, making the design process faster and more cohesive."
+    },
+    {
+      "id": 10,
+      "question": "What is the most important skill for a UX/UI designer?",
+      "options": [
+        "Knowing all design tools",
+        "Understanding users and solving their problems",
+        "Creating beautiful visual designs",
+        "Writing code"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The most important skill for a UX/UI designer is understanding users and solving their problems, as this is the foundation of all good design work and user-centered design principles."
+    }
+  ]
+}

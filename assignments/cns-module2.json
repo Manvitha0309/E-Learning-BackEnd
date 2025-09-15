@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Network Security Fundamentals",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is a firewall?",
+      "options": [
+        "A physical wall around a building",
+        "A network security device that monitors and controls incoming and outgoing network traffic",
+        "A type of computer virus",
+        "A database management system"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A firewall is a network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules, acting as a barrier between trusted and untrusted networks."
+    },
+    {
+      "id": 2,
+      "question": "What is an Intrusion Detection System (IDS)?",
+      "options": [
+        "A system that prevents all network access",
+        "A system that monitors network traffic for suspicious activity and potential threats",
+        "A system that encrypts data",
+        "A system that manages user passwords"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An Intrusion Detection System (IDS) monitors network traffic for suspicious activity and potential threats, alerting administrators to possible security breaches."
+    },
+    {
+      "id": 3,
+      "question": "What is cryptography?",
+      "options": [
+        "The study of ancient writing systems",
+        "The practice of securing information through encryption and decryption techniques",
+        "The study of computer hardware",
+        "The management of network protocols"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cryptography is the practice of securing information through encryption and decryption techniques, ensuring data confidentiality, integrity, and authenticity."
+    },
+    {
+      "id": 4,
+      "question": "What is the purpose of encryption in network security?",
+      "options": [
+        "To make data transmission faster",
+        "To protect data from unauthorized access by converting it into an unreadable format",
+        "To reduce network traffic",
+        "To improve network performance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Encryption protects data from unauthorized access by converting it into an unreadable format that can only be decrypted by authorized parties with the proper key."
+    },
+    {
+      "id": 5,
+      "question": "What is a DDoS attack?",
+      "options": [
+        "A type of virus",
+        "A Distributed Denial of Service attack that overwhelms a system with traffic",
+        "A data breach",
+        "A phishing attempt"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A DDoS (Distributed Denial of Service) attack overwhelms a system with traffic from multiple sources, making it unavailable to legitimate users."
+    },
+    {
+      "id": 6,
+      "question": "What is risk management in cybersecurity?",
+      "options": [
+        "Avoiding all risks",
+        "Identifying, assessing, and mitigating potential security risks",
+        "Ignoring security threats",
+        "Increasing system vulnerabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Risk management in cybersecurity involves identifying, assessing, and mitigating potential security risks to protect organizational assets and information."
+    },
+    {
+      "id": 7,
+      "question": "What are security policies?",
+      "options": [
+        "Government regulations",
+        "Guidelines and rules that define how an organization protects its information and systems",
+        "Software programs",
+        "Hardware devices"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Security policies are guidelines and rules that define how an organization protects its information and systems, establishing standards for security practices."
+    },
+    {
+      "id": 8,
+      "question": "What is the principle of least privilege?",
+      "options": [
+        "Giving users maximum access",
+        "Giving users only the minimum access necessary to perform their job functions",
+        "Sharing passwords with everyone",
+        "Using the same password for all systems"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The principle of least privilege means giving users only the minimum access necessary to perform their job functions, reducing the potential for security breaches."
+    },
+    {
+      "id": 9,
+      "question": "What is a vulnerability assessment?",
+      "options": [
+        "A type of attack",
+        "A systematic evaluation of security weaknesses in a system or network",
+        "A security policy",
+        "A type of encryption"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A vulnerability assessment is a systematic evaluation of security weaknesses in a system or network, helping identify potential entry points for attackers."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between authentication and authorization?",
+      "options": [
+        "They are the same thing",
+        "Authentication verifies identity, authorization determines access permissions",
+        "Authentication is for users, authorization is for systems",
+        "Authentication is online, authorization is offline"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Authentication verifies who a user is (identity), while authorization determines what that user is allowed to access or do (permissions)."
+    }
+  ]
+}

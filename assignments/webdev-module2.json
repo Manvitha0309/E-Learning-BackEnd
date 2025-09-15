@@ -1,0 +1,127 @@
+{
+  "courseId": "webdev",
+  "moduleId": "module2",
+  "moduleTitle": "CSS Fundamentals",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does CSS stand for?",
+      "options": [
+        "Computer Style Sheets",
+        "Creative Style Sheets",
+        "Cascading Style Sheets",
+        "Colorful Style Sheets"
+      ],
+      "correctAnswer": 2,
+      "explanation": "CSS stands for Cascading Style Sheets, which is used to style and layout web pages."
+    },
+    {
+      "id": 2,
+      "question": "How do you select an element with id 'header' in CSS?",
+      "options": [
+        ".header",
+        "#header",
+        "header",
+        "*header"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The # symbol is used to select elements by their ID in CSS."
+    },
+    {
+      "id": 3,
+      "question": "Which property is used to change the background color?",
+      "options": [
+        "color",
+        "background-color",
+        "bg-color",
+        "background"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The background-color property is used to set the background color of an element."
+    },
+    {
+      "id": 4,
+      "question": "What is the CSS 'box model'?",
+      "options": [
+        "A model for creating 3D boxes",
+        "A model for layout and spacing of elements",
+        "A box for storing code",
+        "A model for responsive design"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The CSS box model describes how elements are rendered, including content, padding, border, and margin."
+    },
+    {
+      "id": 5,
+      "question": "Which CSS property is used to change the text color?",
+      "options": [
+        "text-color",
+        "color",
+        "font-color",
+        "text-style"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'color' property is used to set the color of text in CSS."
+    },
+    {
+      "id": 6,
+      "question": "How do you select all elements with class 'button'?",
+      "options": [
+        "#button",
+        ".button",
+        "button",
+        "*button"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The . symbol is used to select elements by their class name in CSS."
+    },
+    {
+      "id": 7,
+      "question": "Which property is used to add space inside an element?",
+      "options": [
+        "margin",
+        "padding",
+        "border",
+        "spacing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'padding' property adds space inside an element, between the content and the border."
+    },
+    {
+      "id": 8,
+      "question": "What does 'margin: 0 auto;' do?",
+      "options": [
+        "Removes all margins",
+        "Centers an element horizontally",
+        "Adds margin to all sides",
+        "Creates automatic margins"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'margin: 0 auto;' sets top and bottom margins to 0 and centers the element horizontally."
+    },
+    {
+      "id": 9,
+      "question": "Which CSS property is used to change the font size?",
+      "options": [
+        "text-size",
+        "font-size",
+        "size",
+        "font-weight"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'font-size' property is used to set the size of the font."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of CSS selectors?",
+      "options": [
+        "To select colors",
+        "To select HTML elements to style",
+        "To select fonts",
+        "To select layouts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CSS selectors are used to select HTML elements that you want to style."
+    }
+  ]
+}

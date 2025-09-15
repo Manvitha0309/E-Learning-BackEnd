@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Machine Learning",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the main difference between supervised and unsupervised learning?",
+      "options": [
+        "Supervised learning is faster than unsupervised learning",
+        "Supervised learning uses labeled data, unsupervised learning doesn't",
+        "Unsupervised learning is more accurate than supervised learning",
+        "Supervised learning only works with numerical data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The main difference is that supervised learning uses labeled training data (input-output pairs), while unsupervised learning works with unlabeled data to find hidden patterns."
+    },
+    {
+      "id": 2,
+      "question": "Which algorithm is commonly used for linear regression?",
+      "options": [
+        "K-means clustering",
+        "Decision trees",
+        "Gradient descent",
+        "Random forest"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Gradient descent is commonly used to optimize the parameters in linear regression by minimizing the cost function through iterative updates."
+    },
+    {
+      "id": 3,
+      "question": "What is overfitting in machine learning?",
+      "options": [
+        "When a model performs poorly on training data",
+        "When a model learns the training data too well and fails to generalize",
+        "When a model takes too long to train",
+        "When a model uses too many features"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Overfitting occurs when a model learns the training data too well, including noise and outliers, and fails to generalize to new, unseen data."
+    },
+    {
+      "id": 4,
+      "question": "Which metric is used to evaluate classification models?",
+      "options": [
+        "Mean squared error",
+        "R-squared",
+        "Accuracy",
+        "Root mean square error"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Accuracy is a common metric for classification models, measuring the proportion of correct predictions out of total predictions."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of cross-validation?",
+      "options": [
+        "To speed up model training",
+        "To reduce the size of the dataset",
+        "To assess model performance and prevent overfitting",
+        "To select the best features"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Cross-validation is used to assess model performance and prevent overfitting by training and testing the model on different subsets of the data."
+    },
+    {
+      "id": 6,
+      "question": "Which clustering algorithm requires you to specify the number of clusters beforehand?",
+      "options": [
+        "Hierarchical clustering",
+        "DBSCAN",
+        "K-means clustering",
+        "Mean shift clustering"
+      ],
+      "correctAnswer": 2,
+      "explanation": "K-means clustering requires you to specify the number of clusters (k) beforehand, unlike other algorithms that can determine the optimal number automatically."
+    },
+    {
+      "id": 7,
+      "question": "What is feature scaling and why is it important?",
+      "options": [
+        "Making features have the same scale to prevent some features from dominating",
+        "Removing unnecessary features from the dataset",
+        "Adding new features to improve model performance",
+        "Converting categorical features to numerical ones"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Feature scaling ensures all features have the same scale, preventing features with larger ranges from dominating the model and improving algorithm performance."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is an example of unsupervised learning?",
+      "options": [
+        "Email spam detection",
+        "House price prediction",
+        "Customer segmentation",
+        "Image recognition"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Customer segmentation is an example of unsupervised learning, where we group customers based on their behavior without knowing the 'correct' segments beforehand."
+    },
+    {
+      "id": 9,
+      "question": "What does the term 'bias' refer to in machine learning?",
+      "options": [
+        "Prejudice in the training data",
+        "The error introduced by approximating a real-world problem",
+        "The difference between predicted and actual values",
+        "The complexity of the model"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Bias refers to the error introduced by approximating a real-world problem with a simplified model, leading to systematic errors in predictions."
+    },
+    {
+      "id": 10,
+      "question": "Which Python library is most commonly used for machine learning?",
+      "options": [
+        "NumPy",
+        "Pandas",
+        "Scikit-learn",
+        "Matplotlib"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Scikit-learn is the most commonly used Python library for machine learning, providing a wide range of algorithms and tools for data mining and analysis."
+    }
+  ]
+}

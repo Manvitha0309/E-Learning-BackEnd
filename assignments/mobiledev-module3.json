@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Data and APIs",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is an API in mobile development?",
+      "options": [
+        "A type of database",
+        "An interface that allows apps to communicate with servers and services",
+        "A programming language",
+        "A design tool"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An API (Application Programming Interface) in mobile development is an interface that allows mobile apps to communicate with servers and external services to fetch or send data."
+    },
+    {
+      "id": 2,
+      "question": "What is JSON data?",
+      "options": [
+        "A programming language",
+        "A lightweight data format for exchanging data between apps and servers",
+        "A database system",
+        "A UI framework"
+      ],
+      "correctAnswer": 1,
+      "explanation": "JSON (JavaScript Object Notation) is a lightweight data format commonly used for exchanging data between mobile apps and servers, making it easy to parse and work with."
+    },
+    {
+      "id": 3,
+      "question": "What is local storage in mobile apps?",
+      "options": [
+        "Storing data on external servers",
+        "Storing data directly on the user's device",
+        "Storing data in the cloud",
+        "Storing data in a database"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Local storage in mobile apps refers to storing data directly on the user's device, allowing the app to work offline and provide faster access to frequently used data."
+    },
+    {
+      "id": 4,
+      "question": "What is user authentication in mobile apps?",
+      "options": [
+        "Making the app secure",
+        "Verifying the identity of users before granting access to app features",
+        "Storing user preferences",
+        "Managing app permissions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "User authentication in mobile apps involves verifying the identity of users before granting access to app features, typically through login credentials or biometric authentication."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of error handling in API calls?",
+      "options": [
+        "To make the app faster",
+        "To gracefully handle network failures and server errors",
+        "To improve the app's design",
+        "To reduce app size"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Error handling in API calls ensures the app gracefully handles network failures, server errors, and other issues, providing a better user experience and preventing crashes."
+    },
+    {
+      "id": 6,
+      "question": "What is caching in mobile development?",
+      "options": [
+        "Storing frequently accessed data locally for faster retrieval",
+        "Making the app smaller",
+        "Improving app security",
+        "Adding animations to the app"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Caching in mobile development involves storing frequently accessed data locally for faster retrieval, reducing network requests and improving app performance."
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between GET and POST requests?",
+      "options": [
+        "GET is faster, POST is slower",
+        "GET retrieves data, POST sends data to the server",
+        "GET is for mobile, POST is for web",
+        "There is no difference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "GET requests are used to retrieve data from the server, while POST requests are used to send data to the server, such as when submitting forms or creating new records."
+    },
+    {
+      "id": 8,
+      "question": "What is offline functionality in mobile apps?",
+      "options": [
+        "Making the app work without an internet connection",
+        "Reducing data usage",
+        "Improving app performance",
+        "Adding more features"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Offline functionality in mobile apps allows the app to work without an internet connection by storing data locally and syncing when connectivity is restored."
+    },
+    {
+      "id": 9,
+      "question": "What is data synchronization in mobile apps?",
+      "options": [
+        "Making data load faster",
+        "Keeping data consistent across devices and servers",
+        "Compressing data to save space",
+        "Encrypting data for security"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data synchronization in mobile apps keeps data consistent across devices and servers, ensuring users see the same information regardless of which device they're using."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of API versioning?",
+      "options": [
+        "To make APIs faster",
+        "To maintain compatibility while adding new features",
+        "To reduce API costs",
+        "To improve API security"
+      ],
+      "correctAnswer": 1,
+      "explanation": "API versioning allows developers to maintain compatibility with existing apps while adding new features, ensuring that updates don't break existing functionality."
+    }
+  ]
+}

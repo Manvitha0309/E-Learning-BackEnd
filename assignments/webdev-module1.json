@@ -1,0 +1,127 @@
+{
+  "courseId": "webdev",
+  "moduleId": "module1",
+  "moduleTitle": "HTML Basics",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does HTML stand for?",
+      "options": [
+        "Hyper Text Markup Language",
+        "High-level Text Management Language",
+        "Hyperlink and Text Markup Language",
+        "Home Tool Markup Language"
+      ],
+      "correctAnswer": 0,
+      "explanation": "HTML stands for Hyper Text Markup Language, which is the standard markup language for creating web pages."
+    },
+    {
+      "id": 2,
+      "question": "Which of the following is used to add a heading in HTML?",
+      "options": [
+        "<h>",
+        "<h1>",
+        "<head>",
+        "<heading>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The <h1> tag is used to create the largest heading in HTML. There are also h2, h3, h4, h5, and h6 tags for smaller headings."
+    },
+    {
+      "id": 3,
+      "question": "What is the correct way to link an external stylesheet?",
+      "options": [
+        "<style rel='stylesheet' href='style.css'>",
+        "<link href='style.css'>",
+        "<link rel='stylesheet' href='style.css'>",
+        "<stylesheet>style.css</stylesheet>"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The correct way to link an external CSS file is using the <link> tag with rel='stylesheet' and href attributes."
+    },
+    {
+      "id": 4,
+      "question": "Which HTML tag is used to create a paragraph?",
+      "options": [
+        "<para>",
+        "<p>",
+        "<paragraph>",
+        "<text>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The <p> tag is used to create paragraphs in HTML."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of the <img> tag?",
+      "options": [
+        "To create a link",
+        "To display an image",
+        "To create a table",
+        "To add audio"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The <img> tag is used to embed images in HTML documents."
+    },
+    {
+      "id": 6,
+      "question": "Which attribute is required for the <img> tag?",
+      "options": [
+        "alt",
+        "src",
+        "width",
+        "height"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'src' attribute is required for the <img> tag as it specifies the path to the image file."
+    },
+    {
+      "id": 7,
+      "question": "What does the <a> tag represent?",
+      "options": [
+        "An anchor or link",
+        "An article",
+        "An address",
+        "An abbreviation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <a> tag creates hyperlinks (anchors) that link to other web pages or sections within the same page."
+    },
+    {
+      "id": 8,
+      "question": "Which HTML tag is used to create an unordered list?",
+      "options": [
+        "<ol>",
+        "<ul>",
+        "<li>",
+        "<list>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The <ul> tag creates an unordered (bulleted) list, while <ol> creates an ordered (numbered) list."
+    },
+    {
+      "id": 9,
+      "question": "What is the correct HTML structure?",
+      "options": [
+        "<html><head><body></body></head></html>",
+        "<html><body><head></head></body></html>",
+        "<html><head></head><body></body></html>",
+        "<head><html><body></body></html></head>"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The correct HTML structure has <html> as the root element, containing <head> and <body> sections."
+    },
+    {
+      "id": 10,
+      "question": "Which tag is used to create a line break?",
+      "options": [
+        "<br>",
+        "<break>",
+        "<lb>",
+        "<newline>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <br> tag creates a line break in HTML. It's a self-closing tag."
+    }
+  ]
+}

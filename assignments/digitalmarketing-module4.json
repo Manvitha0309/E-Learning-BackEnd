@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Content Marketing",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is content marketing?",
+      "options": [
+        "Creating advertisements",
+        "Creating and distributing valuable content to attract and engage a target audience",
+        "Managing social media accounts",
+        "Sending email campaigns"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content marketing involves creating and distributing valuable, relevant content to attract and engage a target audience, ultimately driving profitable customer action."
+    },
+    {
+      "id": 2,
+      "question": "What is a content strategy?",
+      "options": [
+        "A plan for creating content quickly",
+        "A plan for creating, publishing, and managing content to achieve business goals",
+        "A list of content ideas",
+        "A content calendar"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A content strategy is a plan for creating, publishing, and managing content to achieve business goals, including defining target audience, content types, and distribution channels."
+    },
+    {
+      "id": 3,
+      "question": "What is the purpose of blogging in content marketing?",
+      "options": [
+        "To make money quickly",
+        "To provide valuable information, improve SEO, and build authority",
+        "To reduce marketing costs",
+        "To increase social media followers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Blogging in content marketing provides valuable information to your audience, improves SEO rankings, and helps establish your brand as an authority in your industry."
+    },
+    {
+      "id": 4,
+      "question": "What is copywriting?",
+      "options": [
+        "Creating images",
+        "Writing persuasive text to promote products or services",
+        "Managing social media",
+        "Analyzing website data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Copywriting is the art of writing persuasive text to promote products or services, focusing on compelling headlines, clear messaging, and strong call-to-actions."
+    },
+    {
+      "id": 5,
+      "question": "What is video marketing?",
+      "options": [
+        "Creating websites",
+        "Using video content to promote products, services, or brand awareness",
+        "Managing email campaigns",
+        "Analyzing social media data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Video marketing involves using video content to promote products, services, or brand awareness, leveraging the engaging nature of video to connect with audiences."
+    },
+    {
+      "id": 6,
+      "question": "What is content ROI?",
+      "options": [
+        "The amount of content created",
+        "The return on investment from content marketing efforts",
+        "The number of content pieces published",
+        "The time spent creating content"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content ROI measures the return on investment from content marketing efforts, comparing the value generated against the resources invested in content creation and distribution."
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of content distribution?",
+      "options": [
+        "To create more content",
+        "To share content across multiple channels to reach your target audience",
+        "To reduce content costs",
+        "To improve content quality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content distribution involves sharing content across multiple channels (social media, email, websites) to reach your target audience and maximize content visibility."
+    },
+    {
+      "id": 8,
+      "question": "What is user-generated content?",
+      "options": [
+        "Content created by marketers",
+        "Content created by users about your brand or products",
+        "Content created by competitors",
+        "Content created by influencers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "User-generated content is content created by users about your brand or products, such as reviews, testimonials, or social media posts, which can be powerful for building trust."
+    },
+    {
+      "id": 9,
+      "question": "What is the importance of content quality in content marketing?",
+      "options": [
+        "To create more content faster",
+        "High-quality content builds trust, authority, and engages audiences effectively",
+        "To reduce content costs",
+        "To increase content quantity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "High-quality content builds trust, establishes authority, and engages audiences effectively, leading to better results and stronger customer relationships."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between content marketing and traditional advertising?",
+      "options": [
+        "Content marketing is free, advertising costs money",
+        "Content marketing provides value first, advertising promotes products directly",
+        "Content marketing is online, advertising is offline",
+        "There is no difference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content marketing provides value to the audience first through helpful content, while traditional advertising directly promotes products or services without necessarily providing value."
+    }
+  ]
+}

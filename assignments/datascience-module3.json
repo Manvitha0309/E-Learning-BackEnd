@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Data Visualization",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary purpose of data visualization?",
+      "options": [
+        "To make data look pretty",
+        "To communicate insights and patterns in data effectively",
+        "To reduce the size of datasets",
+        "To replace statistical analysis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data visualization's primary purpose is to communicate insights and patterns in data effectively, making complex information easier to understand and interpret."
+    },
+    {
+      "id": 2,
+      "question": "Which Python library is most commonly used for creating static plots?",
+      "options": [
+        "Seaborn",
+        "Plotly",
+        "Matplotlib",
+        "Bokeh"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Matplotlib is the most commonly used Python library for creating static plots. It provides a comprehensive plotting framework and serves as the foundation for many other visualization libraries."
+    },
+    {
+      "id": 3,
+      "question": "What type of chart is best for showing the relationship between two continuous variables?",
+      "options": [
+        "Bar chart",
+        "Pie chart",
+        "Scatter plot",
+        "Histogram"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Scatter plots are ideal for showing the relationship between two continuous variables, as they display individual data points and reveal correlations, clusters, and outliers."
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is NOT a good practice in data visualization?",
+      "options": [
+        "Using appropriate color schemes",
+        "Including clear labels and titles",
+        "Using 3D effects for 2D data",
+        "Choosing the right chart type for your data"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Using 3D effects for 2D data is generally not recommended as it can distort the data representation and make it harder to accurately interpret the information."
+    },
+    {
+      "id": 5,
+      "question": "What does the 'hue' parameter in Seaborn plots control?",
+      "options": [
+        "The size of the plot",
+        "The color of the plot elements",
+        "The transparency of the plot",
+        "The third dimension of the data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The 'hue' parameter in Seaborn controls the color of plot elements, allowing you to encode additional categorical information through color differentiation."
+    },
+    {
+      "id": 6,
+      "question": "Which chart type is most appropriate for showing the distribution of a single continuous variable?",
+      "options": [
+        "Line chart",
+        "Bar chart",
+        "Histogram",
+        "Scatter plot"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Histograms are specifically designed to show the distribution of a single continuous variable by dividing the data into bins and showing the frequency of values in each bin."
+    },
+    {
+      "id": 7,
+      "question": "What is the main advantage of using Seaborn over Matplotlib?",
+      "options": [
+        "It's faster",
+        "It provides more statistical visualizations and better default aesthetics",
+        "It uses less memory",
+        "It's easier to install"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Seaborn's main advantage is that it provides more statistical visualizations and better default aesthetics, making it easier to create publication-ready plots with minimal code."
+    },
+    {
+      "id": 8,
+      "question": "Which visualization technique is best for showing trends over time?",
+      "options": [
+        "Pie chart",
+        "Bar chart",
+        "Line chart",
+        "Scatter plot"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Line charts are ideal for showing trends over time as they connect data points chronologically, making it easy to see patterns, changes, and trends in the data."
+    },
+    {
+      "id": 9,
+      "question": "What does a box plot show?",
+      "options": [
+        "The mean and standard deviation",
+        "The distribution of data including quartiles, median, and outliers",
+        "The correlation between variables",
+        "The frequency of categorical data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A box plot shows the distribution of data including quartiles, median, and outliers, providing a compact way to visualize the spread and skewness of the data."
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is an example of a categorical variable?",
+      "options": [
+        "Height in centimeters",
+        "Temperature in degrees",
+        "Product category",
+        "Sales revenue"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Product category is a categorical variable as it represents distinct groups or categories (like 'Electronics', 'Clothing', 'Books') rather than numerical values."
+    }
+  ]
+}

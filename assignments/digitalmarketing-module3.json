@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Email Marketing and Analytics",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is email marketing?",
+      "options": [
+        "Sending spam emails",
+        "Using email to promote products, services, and build customer relationships",
+        "Managing social media accounts",
+        "Creating websites"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Email marketing involves using email to promote products, services, and build customer relationships through targeted, permission-based communications."
+    },
+    {
+      "id": 2,
+      "question": "What is an email list?",
+      "options": [
+        "A list of email addresses you can spam",
+        "A collection of subscribers who have opted in to receive your emails",
+        "A list of competitors' emails",
+        "A database of customer complaints"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An email list is a collection of subscribers who have opted in to receive your emails, representing people interested in your brand, products, or services."
+    },
+    {
+      "id": 3,
+      "question": "What is the purpose of building an email list?",
+      "options": [
+        "To send more spam",
+        "To create a direct communication channel with interested customers",
+        "To reduce marketing costs",
+        "To improve website design"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Building an email list creates a direct communication channel with interested customers, allowing for targeted marketing and relationship building."
+    },
+    {
+      "id": 4,
+      "question": "What makes an effective email campaign?",
+      "options": [
+        "Sending as many emails as possible",
+        "Relevant content, clear subject lines, and strong call-to-actions",
+        "Using only images",
+        "Sending emails at random times"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An effective email campaign includes relevant content, clear subject lines, strong call-to-actions, and proper timing to engage recipients."
+    },
+    {
+      "id": 5,
+      "question": "What is Google Analytics?",
+      "options": [
+        "A social media platform",
+        "A web analytics service that tracks and reports website traffic",
+        "An email marketing tool",
+        "A design software"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Google Analytics is a web analytics service that tracks and reports website traffic, providing insights into user behavior and website performance."
+    },
+    {
+      "id": 6,
+      "question": "What are key metrics in digital marketing?",
+      "options": [
+        "The number of employees",
+        "Important measurements that indicate marketing performance and success",
+        "The amount of content created",
+        "The number of social media accounts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Key metrics in digital marketing are important measurements like conversion rates, click-through rates, and engagement that indicate marketing performance and success."
+    },
+    {
+      "id": 7,
+      "question": "What is a conversion rate?",
+      "options": [
+        "The speed of website loading",
+        "The percentage of visitors who complete a desired action",
+        "The number of emails sent",
+        "The amount of social media followers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A conversion rate is the percentage of visitors who complete a desired action, such as making a purchase, signing up, or downloading content."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of A/B testing in email marketing?",
+      "options": [
+        "To send more emails",
+        "To test different versions of emails to improve performance",
+        "To reduce email costs",
+        "To increase email list size"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A/B testing in email marketing involves testing different versions of emails to determine which performs better and improve overall campaign effectiveness."
+    },
+    {
+      "id": 9,
+      "question": "What is email segmentation?",
+      "options": [
+        "Sending the same email to everyone",
+        "Dividing your email list into smaller groups based on characteristics or behavior",
+        "Deleting old emails",
+        "Creating email templates"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Email segmentation involves dividing your email list into smaller groups based on characteristics or behavior to send more targeted and relevant content."
+    },
+    {
+      "id": 10,
+      "question": "What is the importance of email deliverability?",
+      "options": [
+        "Making emails look pretty",
+        "Ensuring emails reach recipients' inboxes rather than spam folders",
+        "Reducing email costs",
+        "Increasing email list size"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Email deliverability is crucial for ensuring emails reach recipients' inboxes rather than spam folders, maximizing the effectiveness of email marketing campaigns."
+    }
+  ]
+}

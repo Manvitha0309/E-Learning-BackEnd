@@ -1,0 +1,127 @@
+{
+  "courseId": "webdev",
+  "moduleId": "module4",
+  "moduleTitle": "Building a Website",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is responsive web design?",
+      "options": [
+        "Design that responds to user clicks",
+        "Design that adapts to different screen sizes",
+        "Design that changes colors",
+        "Design that moves automatically"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Responsive web design ensures that websites work well on various devices and screen sizes."
+    },
+    {
+      "id": 2,
+      "question": "Which CSS property is commonly used for responsive design?",
+      "options": [
+        "display",
+        "position",
+        "media queries",
+        "float"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Media queries are CSS rules that apply different styles based on device characteristics like screen size."
+    },
+    {
+      "id": 3,
+      "question": "What is the purpose of a favicon?",
+      "options": [
+        "To store website data",
+        "To display a small icon in browser tabs",
+        "To improve website speed",
+        "To add animations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A favicon is a small icon that appears in browser tabs and bookmarks to represent a website."
+    },
+    {
+      "id": 4,
+      "question": "Which HTML tag is used to include external JavaScript files?",
+      "options": [
+        "<javascript>",
+        "<script>",
+        "<js>",
+        "<include>"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The <script> tag is used to include JavaScript code or link to external JavaScript files."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of semantic HTML elements?",
+      "options": [
+        "To make code run faster",
+        "To provide meaning and structure to content",
+        "To add colors to text",
+        "To create animations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Semantic HTML elements like <header>, <nav>, <main>, <section> provide meaning and structure to web content."
+    },
+    {
+      "id": 6,
+      "question": "Which method is used to validate HTML forms?",
+      "options": [
+        "HTML validation",
+        "CSS validation",
+        "JavaScript validation",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Form validation can be done using HTML5 attributes, CSS styling, and JavaScript for comprehensive validation."
+    },
+    {
+      "id": 7,
+      "question": "What is the purpose of the <meta> tag?",
+      "options": [
+        "To create metadata about the HTML document",
+        "To add images",
+        "To create links",
+        "To add styles"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The <meta> tag provides metadata about the HTML document, such as character encoding, viewport settings, and SEO information."
+    },
+    {
+      "id": 8,
+      "question": "Which CSS property is used to create flexible layouts?",
+      "options": [
+        "float",
+        "position",
+        "flexbox",
+        "display"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Flexbox (display: flex) is a CSS layout method that provides flexible and efficient ways to arrange elements."
+    },
+    {
+      "id": 9,
+      "question": "What is the purpose of version control in web development?",
+      "options": [
+        "To control website colors",
+        "To track changes and collaborate on code",
+        "To improve website speed",
+        "To add animations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Version control systems like Git help developers track changes, collaborate, and manage different versions of their code."
+    },
+    {
+      "id": 10,
+      "question": "Which is the most important factor for website performance?",
+      "options": [
+        "Number of images",
+        "Page load speed",
+        "Number of pages",
+        "Color scheme"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Page load speed is crucial for user experience, SEO, and overall website performance."
+    }
+  ]
+}

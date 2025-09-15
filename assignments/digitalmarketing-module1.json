@@ -1,0 +1,127 @@
+{
+  "courseId": "digitalmarketing",
+  "moduleId": "module1",
+  "moduleTitle": "SEO and SEM",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What does SEO stand for?",
+      "options": [
+        "Search Engine Optimization",
+        "Social Engine Optimization",
+        "Search Engine Organization",
+        "Social Engine Organization"
+      ],
+      "correctAnswer": 0,
+      "explanation": "SEO stands for Search Engine Optimization, which is the practice of improving a website's visibility in search engine results."
+    },
+    {
+      "id": 2,
+      "question": "What does SEM stand for?",
+      "options": [
+        "Search Engine Marketing",
+        "Social Engine Marketing",
+        "Search Engine Management",
+        "Social Engine Management"
+      ],
+      "correctAnswer": 0,
+      "explanation": "SEM stands for Search Engine Marketing, which includes both paid advertising and SEO to increase visibility in search engines."
+    },
+    {
+      "id": 3,
+      "question": "What is on-page SEO?",
+      "options": [
+        "SEO done outside the website",
+        "SEO techniques applied directly on the website",
+        "SEO for mobile devices only",
+        "SEO for social media"
+      ],
+      "correctAnswer": 1,
+      "explanation": "On-page SEO involves optimizing elements directly on your website, such as content, HTML tags, and internal linking."
+    },
+    {
+      "id": 4,
+      "question": "What is off-page SEO?",
+      "options": [
+        "SEO done on the website",
+        "SEO techniques done outside the website",
+        "SEO for desktop only",
+        "SEO for local businesses"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Off-page SEO involves activities outside your website that affect your rankings, such as link building and social media marketing."
+    },
+    {
+      "id": 5,
+      "question": "What is keyword research?",
+      "options": [
+        "Finding random words",
+        "Finding words and phrases that people search for related to your business",
+        "Creating new words",
+        "Deleting old words"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Keyword research is the process of finding and analyzing search terms that people use to find content related to your business."
+    },
+    {
+      "id": 6,
+      "question": "What is Google Ads?",
+      "options": [
+        "A search engine",
+        "Google's online advertising platform",
+        "A social media platform",
+        "A website builder"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Google Ads is Google's online advertising platform where businesses can create and manage paid advertising campaigns."
+    },
+    {
+      "id": 7,
+      "question": "What is PPC?",
+      "options": [
+        "Pay Per Click",
+        "Pay Per Customer",
+        "Pay Per Content",
+        "Pay Per Campaign"
+      ],
+      "correctAnswer": 0,
+      "explanation": "PPC stands for Pay Per Click, a model where advertisers pay only when someone clicks on their ad."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of ad targeting in digital marketing?",
+      "options": [
+        "To make ads look better",
+        "To show ads to specific audiences based on demographics, interests, and behavior",
+        "To increase ad costs",
+        "To slow down campaigns"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ad targeting allows marketers to show their ads to specific groups of people who are most likely to be interested in their products or services."
+    },
+    {
+      "id": 9,
+      "question": "What is a landing page?",
+      "options": [
+        "The homepage of a website",
+        "A specific page where visitors arrive after clicking an ad or link",
+        "A social media page",
+        "A search engine page"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A landing page is a specific web page designed to receive traffic from marketing campaigns and convert visitors into leads or customers."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of A/B testing in digital marketing?",
+      "options": [
+        "To make campaigns more expensive",
+        "To compare two versions of an ad or webpage to see which performs better",
+        "To slow down campaigns",
+        "To delete campaigns"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A/B testing compares two versions of a marketing element to determine which one performs better and drives more conversions."
+    }
+  ]
+}

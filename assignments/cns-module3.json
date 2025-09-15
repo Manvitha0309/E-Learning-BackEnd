@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Advanced Topics in Security",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What are secure coding practices?",
+      "options": [
+        "Writing code quickly",
+        "Programming techniques that help prevent security vulnerabilities",
+        "Using any programming language",
+        "Writing code without comments"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Secure coding practices are programming techniques that help prevent security vulnerabilities, such as input validation, proper error handling, and avoiding common security pitfalls."
+    },
+    {
+      "id": 2,
+      "question": "What is wireless network security?",
+      "options": [
+        "Making wireless networks faster",
+        "Protecting wireless networks from unauthorized access and attacks",
+        "Reducing wireless network costs",
+        "Improving wireless network range"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Wireless network security involves protecting wireless networks from unauthorized access and attacks through encryption, authentication, and other security measures."
+    },
+    {
+      "id": 3,
+      "question": "What is penetration testing?",
+      "options": [
+        "A type of cyber attack",
+        "Authorized simulated cyber attacks to test system security",
+        "A security policy",
+        "A type of encryption"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Penetration testing involves authorized simulated cyber attacks to test system security, identifying vulnerabilities before malicious attackers can exploit them."
+    },
+    {
+      "id": 4,
+      "question": "What is ethical hacking?",
+      "options": [
+        "Illegal hacking activities",
+        "Authorized hacking to identify security vulnerabilities and improve security",
+        "Hacking for personal gain",
+        "Hacking without permission"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ethical hacking involves authorized hacking activities to identify security vulnerabilities and improve security, performed by security professionals with proper authorization."
+    },
+    {
+      "id": 5,
+      "question": "What is social engineering?",
+      "options": [
+        "A type of software engineering",
+        "Manipulating people to gain unauthorized access to information or systems",
+        "A network protocol",
+        "A type of encryption"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Social engineering involves manipulating people to gain unauthorized access to information or systems, often through deception, persuasion, or psychological manipulation."
+    },
+    {
+      "id": 6,
+      "question": "What is a zero-day vulnerability?",
+      "options": [
+        "A vulnerability that has been fixed",
+        "A security vulnerability that is unknown to security vendors and has no available patch",
+        "A vulnerability that only affects old systems",
+        "A vulnerability that is easy to fix"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A zero-day vulnerability is a security vulnerability that is unknown to security vendors and has no available patch, making it particularly dangerous as it can be exploited before a fix is available."
+    },
+    {
+      "id": 7,
+      "question": "What is incident response?",
+      "options": [
+        "Preventing security incidents",
+        "The process of handling and managing security incidents when they occur",
+        "Creating security policies",
+        "Training employees"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Incident response is the process of handling and managing security incidents when they occur, including detection, analysis, containment, and recovery."
+    },
+    {
+      "id": 8,
+      "question": "What is threat modeling?",
+      "options": [
+        "Creating threats",
+        "A systematic approach to identifying and addressing potential security threats",
+        "A type of attack",
+        "A security tool"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Threat modeling is a systematic approach to identifying and addressing potential security threats, helping organizations understand and mitigate security risks."
+    },
+    {
+      "id": 9,
+      "question": "What is the principle of defense in depth?",
+      "options": [
+        "Using only one security measure",
+        "Implementing multiple layers of security controls",
+        "Focusing only on network security",
+        "Ignoring physical security"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Defense in depth involves implementing multiple layers of security controls, so if one layer fails, other layers can still provide protection."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between a vulnerability and a threat?",
+      "options": [
+        "They are the same thing",
+        "A vulnerability is a weakness, a threat is a potential danger that could exploit it",
+        "A vulnerability is external, a threat is internal",
+        "A vulnerability is software, a threat is hardware"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A vulnerability is a weakness in a system that could be exploited, while a threat is a potential danger or attack that could exploit that vulnerability."
+    }
+  ]
+}

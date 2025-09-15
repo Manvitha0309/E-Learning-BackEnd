@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "App Deployment",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the purpose of testing in mobile app development?",
+      "options": [
+        "To make the app look better",
+        "To ensure the app works correctly and meets quality standards",
+        "To reduce development time",
+        "To make the app smaller"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Testing in mobile app development ensures the app works correctly, meets quality standards, and provides a good user experience before release."
+    },
+    {
+      "id": 2,
+      "question": "What is debugging in mobile development?",
+      "options": [
+        "Making the app faster",
+        "Finding and fixing errors in the code",
+        "Improving the app's design",
+        "Adding new features"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Debugging in mobile development involves finding and fixing errors in the code to ensure the app functions correctly and provides a smooth user experience."
+    },
+    {
+      "id": 3,
+      "question": "What is the App Store?",
+      "options": [
+        "A physical store for mobile devices",
+        "Apple's digital distribution platform for iOS apps",
+        "A development tool",
+        "A testing platform"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The App Store is Apple's digital distribution platform where users can discover, download, and install iOS apps on their devices."
+    },
+    {
+      "id": 4,
+      "question": "What is the Google Play Store?",
+      "options": [
+        "A physical store for Android devices",
+        "Google's digital distribution platform for Android apps",
+        "A development environment",
+        "A testing framework"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Google Play Store is Google's digital distribution platform where users can discover, download, and install Android apps on their devices."
+    },
+    {
+      "id": 5,
+      "question": "What is app maintenance?",
+      "options": [
+        "Keeping the app running smoothly after release",
+        "Making the app smaller",
+        "Improving the app's design",
+        "Adding more features"
+      ],
+      "correctAnswer": 0,
+      "explanation": "App maintenance involves keeping the app running smoothly after release by fixing bugs, updating content, and ensuring compatibility with new OS versions."
+    },
+    {
+      "id": 6,
+      "question": "What is the purpose of app updates?",
+      "options": [
+        "To make the app larger",
+        "To fix bugs, add features, and improve performance",
+        "To change the app's name",
+        "To reduce app security"
+      ],
+      "correctAnswer": 1,
+      "explanation": "App updates are released to fix bugs, add new features, improve performance, and ensure compatibility with new operating system versions."
+    },
+    {
+      "id": 7,
+      "question": "What is beta testing?",
+      "options": [
+        "Testing the app before development",
+        "Testing the app with a limited group of users before public release",
+        "Testing the app's design",
+        "Testing the app's performance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Beta testing involves testing the app with a limited group of users before public release to identify issues and gather feedback for improvements."
+    },
+    {
+      "id": 8,
+      "question": "What is app store optimization (ASO)?",
+      "options": [
+        "Making the app run faster",
+        "Optimizing the app's visibility and discoverability in app stores",
+        "Reducing the app's size",
+        "Improving the app's security"
+      ],
+      "correctAnswer": 1,
+      "explanation": "App Store Optimization (ASO) involves optimizing the app's visibility and discoverability in app stores through keywords, descriptions, and other metadata."
+    },
+    {
+      "id": 9,
+      "question": "What is the purpose of app analytics?",
+      "options": [
+        "To make the app more secure",
+        "To track user behavior and app performance",
+        "To reduce development costs",
+        "To improve app design"
+      ],
+      "correctAnswer": 1,
+      "explanation": "App analytics track user behavior and app performance, providing insights that help developers make data-driven decisions for improvements."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between app development and app deployment?",
+      "options": [
+        "Development is coding, deployment is testing",
+        "Development is creating the app, deployment is releasing it to users",
+        "Development is design, deployment is coding",
+        "There is no difference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "App development involves creating and building the app, while app deployment involves releasing the app to users through app stores and managing its lifecycle."
+    }
+  ]
+}

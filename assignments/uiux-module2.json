@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "User Research",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary goal of user research?",
+      "options": [
+        "To make the design look more attractive",
+        "To understand user needs, behaviors, and motivations",
+        "To reduce development costs",
+        "To speed up the design process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The primary goal of user research is to understand user needs, behaviors, and motivations to inform design decisions and create better user experiences."
+    },
+    {
+      "id": 2,
+      "question": "Which research method involves observing users in their natural environment?",
+      "options": [
+        "User interviews",
+        "Surveys",
+        "Contextual inquiry",
+        "A/B testing"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Contextual inquiry involves observing users in their natural environment while they perform tasks, providing insights into real-world usage patterns."
+    },
+    {
+      "id": 3,
+      "question": "What is a persona in UX design?",
+      "options": [
+        "A fictional character representing a user type",
+        "A real user who tests the product",
+        "A design pattern",
+        "A type of user interface"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A persona is a fictional character created based on user research data to represent a specific user type, helping designers empathize with users."
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is NOT a qualitative research method?",
+      "options": [
+        "User interviews",
+        "Focus groups",
+        "Online surveys with multiple choice questions",
+        "Usability testing"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Online surveys with multiple choice questions are quantitative research methods, as they generate numerical data, while the others are qualitative methods that provide insights and understanding."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of a user journey map?",
+      "options": [
+        "To show the visual design of an interface",
+        "To document the steps a user takes to complete a task",
+        "To list all the features of a product",
+        "To show the technical architecture"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A user journey map documents the steps a user takes to complete a task, including their emotions, pain points, and touchpoints with the product or service."
+    },
+    {
+      "id": 6,
+      "question": "Which research method is best for understanding user motivations and attitudes?",
+      "options": [
+        "Analytics data analysis",
+        "User interviews",
+        "A/B testing",
+        "Heatmap analysis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "User interviews are best for understanding user motivations and attitudes as they allow for in-depth exploration of user thoughts, feelings, and experiences."
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between usability and user experience?",
+      "options": [
+        "They are the same thing",
+        "Usability is about ease of use, UX is about overall experience",
+        "Usability is for websites, UX is for mobile apps",
+        "Usability is technical, UX is visual"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Usability focuses on how easy and efficient a product is to use, while user experience encompasses the entire user's interaction with the product, including emotions and perceptions."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is a quantitative research method?",
+      "options": [
+        "User interviews",
+        "Card sorting",
+        "Analytics data analysis",
+        "Contextual inquiry"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Analytics data analysis is a quantitative research method as it involves collecting and analyzing numerical data about user behavior and interactions."
+    },
+    {
+      "id": 9,
+      "question": "What is the purpose of usability testing?",
+      "options": [
+        "To test the technical performance of a product",
+        "To evaluate how easy a product is to use with real users",
+        "To gather user feedback on visual design",
+        "To measure user satisfaction with customer service"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Usability testing evaluates how easy a product is to use by observing real users as they attempt to complete specific tasks, identifying usability issues and areas for improvement."
+    },
+    {
+      "id": 10,
+      "question": "Which research method involves asking users to organize information into categories?",
+      "options": [
+        "User interviews",
+        "Card sorting",
+        "A/B testing",
+        "Focus groups"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Card sorting is a research method where users organize information into categories, helping designers understand how users think about and categorize information."
+    }
+  ]
+}

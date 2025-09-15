@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Social Media Marketing",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is social media marketing?",
+      "options": [
+        "Creating websites",
+        "Using social media platforms to promote products and services",
+        "Managing email campaigns",
+        "Developing mobile apps"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Social media marketing involves using social media platforms to promote products and services, build brand awareness, and engage with customers."
+    },
+    {
+      "id": 2,
+      "question": "What is the first step in developing a social media strategy?",
+      "options": [
+        "Creating content",
+        "Defining goals and target audience",
+        "Choosing platforms",
+        "Setting up accounts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The first step in developing a social media strategy is defining clear goals and identifying your target audience, which informs all other strategic decisions."
+    },
+    {
+      "id": 3,
+      "question": "What is content creation in social media marketing?",
+      "options": [
+        "Buying advertising space",
+        "Creating engaging posts, images, and videos for social media",
+        "Managing customer service",
+        "Analyzing website traffic"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content creation in social media marketing involves creating engaging posts, images, videos, and other content that resonates with your audience and supports your marketing goals."
+    },
+    {
+      "id": 4,
+      "question": "What is content scheduling?",
+      "options": [
+        "Creating content quickly",
+        "Planning and timing when to publish content on social media",
+        "Deleting old content",
+        "Organizing content by topic"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content scheduling involves planning and timing when to publish content on social media to reach your audience at optimal times and maintain consistent posting."
+    },
+    {
+      "id": 5,
+      "question": "What are paid social campaigns?",
+      "options": [
+        "Free social media posts",
+        "Sponsored content and advertisements on social media platforms",
+        "User-generated content",
+        "Organic social media posts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Paid social campaigns are sponsored content and advertisements on social media platforms that help reach a larger audience and achieve specific marketing objectives."
+    },
+    {
+      "id": 6,
+      "question": "What is social media analytics?",
+      "options": [
+        "Creating social media content",
+        "Measuring and analyzing social media performance and engagement",
+        "Managing social media accounts",
+        "Designing social media graphics"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Social media analytics involves measuring and analyzing social media performance, engagement metrics, and user behavior to optimize marketing strategies."
+    },
+    {
+      "id": 7,
+      "question": "What is engagement in social media marketing?",
+      "options": [
+        "The number of followers",
+        "Interactions like likes, comments, shares, and clicks on social media content",
+        "The amount of content posted",
+        "The time spent on social media"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Engagement in social media marketing refers to interactions like likes, comments, shares, and clicks on social media content, indicating audience interest and involvement."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of social media reporting?",
+      "options": [
+        "To create more content",
+        "To track performance and demonstrate ROI of social media efforts",
+        "To increase followers",
+        "To reduce costs"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Social media reporting tracks performance and demonstrates the return on investment (ROI) of social media efforts, helping justify marketing spend and optimize strategies."
+    },
+    {
+      "id": 9,
+      "question": "What is community management in social media?",
+      "options": [
+        "Creating social media accounts",
+        "Building and nurturing relationships with your social media audience",
+        "Analyzing social media data",
+        "Designing social media graphics"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Community management in social media involves building and nurturing relationships with your social media audience through engagement, customer service, and relationship building."
+    },
+    {
+      "id": 10,
+      "question": "What is the difference between organic and paid social media?",
+      "options": [
+        "Organic is free, paid requires budget",
+        "Organic reaches followers naturally, paid reaches broader audiences through advertising",
+        "Organic is for B2B, paid is for B2C",
+        "There is no difference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Organic social media reaches your followers naturally without payment, while paid social media reaches broader audiences through advertising and sponsored content."
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "UI Design with Figma",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is Figma primarily used for?",
+      "options": [
+        "Video editing",
+        "UI/UX design and prototyping",
+        "Database management",
+        "Web development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Figma is primarily used for UI/UX design and prototyping, allowing designers to create interfaces, collaborate in real-time, and create interactive prototypes."
+    },
+    {
+      "id": 2,
+      "question": "What is a component in Figma?",
+      "options": [
+        "A single design element",
+        "A reusable design element that can be used across multiple designs",
+        "A type of text element",
+        "A color palette"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A component in Figma is a reusable design element that can be used across multiple designs, ensuring consistency and making updates easier across the entire design system."
+    },
+    {
+      "id": 3,
+      "question": "What is the purpose of a style guide in UI design?",
+      "options": [
+        "To show the technical implementation",
+        "To document design standards and ensure consistency",
+        "To list all the features of a product",
+        "To show the user flow"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A style guide documents design standards including colors, typography, spacing, and components to ensure consistency across all design work and development."
+    },
+    {
+      "id": 4,
+      "question": "What are variants in Figma?",
+      "options": [
+        "Different versions of a file",
+        "Different states or properties of a component",
+        "Different color schemes",
+        "Different file formats"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Variants in Figma are different states or properties of a component, such as different button states (default, hover, pressed) or different sizes of the same component."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of prototyping in Figma?",
+      "options": [
+        "To create the final code",
+        "To create interactive mockups that simulate user interactions",
+        "To export designs to other tools",
+        "To organize design files"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Prototyping in Figma creates interactive mockups that simulate user interactions, allowing designers and stakeholders to test and validate design concepts before development."
+    },
+    {
+      "id": 6,
+      "question": "What is auto-layout in Figma?",
+      "options": [
+        "A feature that automatically arranges elements in a frame",
+        "A type of component",
+        "A color adjustment tool",
+        "A text formatting feature"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Auto-layout in Figma automatically arranges elements in a frame, making it easier to create responsive designs and maintain consistent spacing between elements."
+    },
+    {
+      "id": 7,
+      "question": "What is the difference between a frame and a group in Figma?",
+      "options": [
+        "There is no difference",
+        "Frames have layout properties, groups don't",
+        "Groups are for text, frames are for shapes",
+        "Frames are temporary, groups are permanent"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Frames have layout properties like auto-layout and can be used for responsive design, while groups are simply containers that hold elements together without layout properties."
+    },
+    {
+      "id": 8,
+      "question": "What is the purpose of constraints in Figma?",
+      "options": [
+        "To limit the number of elements in a design",
+        "To control how elements resize and position within a frame",
+        "To restrict access to design files",
+        "To set design deadlines"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Constraints in Figma control how elements resize and position within a frame, ensuring elements maintain their relative positions when the frame is resized."
+    },
+    {
+      "id": 9,
+      "question": "What is a design system?",
+      "options": [
+        "A single design file",
+        "A collection of reusable components, patterns, and guidelines",
+        "A type of prototyping tool",
+        "A color palette"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A design system is a collection of reusable components, patterns, and guidelines that ensure consistency across all design work and help teams work more efficiently."
+    },
+    {
+      "id": 10,
+      "question": "What is the benefit of using Figma's collaborative features?",
+      "options": [
+        "It makes designs look better",
+        "It allows multiple people to work on the same design simultaneously",
+        "It reduces file sizes",
+        "It improves design performance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Figma's collaborative features allow multiple people to work on the same design simultaneously, enabling real-time collaboration and faster iteration cycles."
+    }
+  ]
+}

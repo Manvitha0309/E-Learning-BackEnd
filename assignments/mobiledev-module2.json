@@ -1,0 +1,125 @@
+{
+  "moduleTitle": "Building UI",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is SwiftUI?",
+      "options": [
+        "A programming language for Android development",
+        "Apple's declarative UI framework for iOS development",
+        "A database management system",
+        "A web development framework"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SwiftUI is Apple's declarative UI framework for iOS development, allowing developers to build user interfaces using a declarative syntax that automatically handles updates and state management."
+    },
+    {
+      "id": 2,
+      "question": "What is Jetpack Compose?",
+      "options": [
+        "A UI toolkit for building native Android apps",
+        "A database library for Android",
+        "A networking library for mobile apps",
+        "A testing framework for mobile development"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Jetpack Compose is a modern UI toolkit for building native Android apps using a declarative approach, similar to SwiftUI but for Android development."
+    },
+    {
+      "id": 3,
+      "question": "What are React Native components?",
+      "options": [
+        "Native iOS and Android components",
+        "Reusable UI elements that work across iOS and Android",
+        "Database components",
+        "Server-side components"
+      ],
+      "correctAnswer": 1,
+      "explanation": "React Native components are reusable UI elements that work across both iOS and Android platforms, allowing developers to write code once and deploy to multiple platforms."
+    },
+    {
+      "id": 4,
+      "question": "What is state management in mobile apps?",
+      "options": [
+        "Managing the app's file system",
+        "Managing the app's data and UI state throughout the app lifecycle",
+        "Managing user accounts",
+        "Managing app permissions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "State management in mobile apps involves managing the app's data and UI state throughout the app lifecycle, ensuring data consistency and proper UI updates."
+    },
+    {
+      "id": 5,
+      "question": "What is the purpose of navigation in mobile apps?",
+      "options": [
+        "To connect to the internet",
+        "To move between different screens and sections of the app",
+        "To store user data",
+        "To handle user authentication"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Navigation in mobile apps allows users to move between different screens and sections of the app, providing a structured way to access different features and content."
+    },
+    {
+      "id": 6,
+      "question": "What is a layout in mobile UI design?",
+      "options": [
+        "A type of animation",
+        "The arrangement and positioning of UI elements on the screen",
+        "A color scheme",
+        "A font style"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A layout in mobile UI design refers to the arrangement and positioning of UI elements on the screen, determining how components are organized and displayed to users."
+    },
+    {
+      "id": 7,
+      "question": "What is responsive design in mobile development?",
+      "options": [
+        "Designing for multiple screen sizes and orientations",
+        "Making apps load faster",
+        "Using responsive images",
+        "Creating animations"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Responsive design in mobile development involves designing for multiple screen sizes and orientations, ensuring the app looks and works well on different devices."
+    },
+    {
+      "id": 8,
+      "question": "What is the difference between native and cross-platform development?",
+      "options": [
+        "Native is faster, cross-platform is slower",
+        "Native uses platform-specific tools, cross-platform uses shared code",
+        "Native is for iOS, cross-platform is for Android",
+        "There is no difference"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Native development uses platform-specific tools and languages (Swift for iOS, Kotlin for Android), while cross-platform development uses shared code that works on multiple platforms."
+    },
+    {
+      "id": 9,
+      "question": "What is a component library in mobile development?",
+      "options": [
+        "A collection of pre-built UI components",
+        "A database of user data",
+        "A set of development tools",
+        "A collection of app icons"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A component library in mobile development is a collection of pre-built UI components that can be reused across different parts of the app, ensuring consistency and speeding up development."
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of UI testing in mobile development?",
+      "options": [
+        "To test the app's performance",
+        "To test the user interface and user interactions",
+        "To test the app's security",
+        "To test the app's network connectivity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "UI testing in mobile development tests the user interface and user interactions to ensure the app works correctly from the user's perspective and meets usability requirements."
+    }
+  ]
+}
